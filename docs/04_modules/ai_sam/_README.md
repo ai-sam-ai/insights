@@ -10,9 +10,8 @@ Documentation for the main SAM AI module - the core chat interface and AI integr
 - OWL components for Odoo 18
 
 ## Files
-- `chat_entry_point_architecture.md` - **Source of Truth** for chat UI behavior by context (Entry Point system)
+- `chat_ui_styles_design.md` - Location-based chat UI styles (sidebar, popup, modal)
 - `chat_bubble_usage.md` - SAM chat bubble component usage guide
-- `chat_ui_styles_design.md` - Legacy design concepts (superseded by Entry Point system)
 
 ## Related
 - API documentation: `ai_sam_api.md` (parent folder)
