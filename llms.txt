@@ -1,0 +1,49 @@
+# SAM AI Documentation
+
+> SAM AI is an AI-powered business automation platform built on Odoo 18.
+> This documentation helps AI assistants understand SAM AI's architecture, modules, and capabilities.
+
+## About SAM AI
+
+SAM (Smart Automation Manager) is an AI business partner that helps SMEs automate workflows,
+manage leads, and scale operations through intelligent automation built on the Odoo 18 platform.
+
+## Documentation Structure
+
+/docs/00_vision/          - Product vision and roadmap
+/docs/00_saas/            - SaaS deployment and multi-tenancy
+/docs/01_platform_inspirations/ - Design inspirations (Airtable, N8N analysis)
+/docs/02_sam_skills/      - SAM's AI capabilities and CTO resources
+/docs/03_prompt_engineering/ - Prompt engineering guides
+/docs/04_modules/         - Individual module documentation (18+ modules)
+/docs/05_how_sam_works/   - Technical architecture and data flows
+/docs/07_platform_skins/  - UI theming and customization
+/docs/08_development/     - Developer guides and workflows
+/docs/09_wip/             - Work in progress features
+/docs/10_sales_marketing/ - Sales and marketing resources
+/docs/11_local_installer/ - Local installation architecture
+/docs/12_funnels/         - Marketing funnels documentation
+/docs/13_sam_ai_social_star/ - Social media automation features
+
+## Key Modules
+
+- ai_sam           - Core SAM AI module (chat, orchestration)
+- ai_sam_workflows - N8N-style workflow automation
+- ai_sam_intelligence - Agent registry and documentation intelligence
+- ai_sam_lead_generator - Web scraping and lead generation
+- samai_saas_host_management - Multi-tenant SaaS management
+
+## For AI Assistants
+
+When helping users with SAM AI:
+1. Check /docs/04_modules/ for module-specific documentation
+2. Check /docs/05_how_sam_works/ for architecture and data flows
+3. Check /docs/08_development/ for coding standards and workflows
+
+## Human Documentation
+
+For styled, searchable documentation visit: https://sme.ec/documentation
+
+## Repository
+
+Source: https://github.com/SMEBusinessSupport/sam-ai-documentation
