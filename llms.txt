@@ -1,49 +1,99 @@
 # SAM AI Documentation
 
 > SAM AI is an AI-powered business automation platform built on Odoo 18.
-> This documentation helps AI assistants understand SAM AI's architecture, modules, and capabilities.
 
-## About SAM AI
+Base URL: https://ai-sam-ai.github.io
 
-SAM (Smart Automation Manager) is an AI business partner that helps SMEs automate workflows,
-manage leads, and scale operations through intelligent automation built on the Odoo 18 platform.
+---
 
-## Documentation Structure
+## How to Navigate (For AI Agents)
 
-/docs/00_vision/          - Product vision and roadmap
-/docs/00_saas/            - SaaS deployment and multi-tenancy
-/docs/01_platform_inspirations/ - Design inspirations (Airtable, N8N analysis)
-/docs/02_sam_skills/      - SAM's AI capabilities and CTO resources
-/docs/03_prompt_engineering/ - Prompt engineering guides
-/docs/04_modules/         - Individual module documentation (18+ modules)
-/docs/05_how_sam_works/   - Technical architecture and data flows
-/docs/07_platform_skins/  - UI theming and customization
-/docs/08_development/     - Developer guides and workflows
-/docs/09_wip/             - Work in progress features
-/docs/10_sales_marketing/ - Sales and marketing resources
-/docs/11_local_installer/ - Local installation architecture
-/docs/12_funnels/         - Marketing funnels documentation
-/docs/13_sam_ai_social_star/ - Social media automation features
+SAM AI uses a **four-file documentation standard** per module:
 
-## Key Modules
+| File | Purpose | When to Fetch |
+|------|---------|---------------|
+| `_META.md` | Agent routing, context, cross-references | **First** - start here |
+| `_SCHEMA.md` | Technical specs, models, API endpoints | Need code details |
+| `_WOW.md` | Benefits, use cases (non-technical) | Need sales/marketing context |
+| `_FAQ.md` | Q&A format, troubleshooting | Specific questions |
 
-- ai_sam           - Core SAM AI module (chat, orchestration)
-- ai_sam_workflows - N8N-style workflow automation
-- ai_sam_intelligence - Agent registry and documentation intelligence
-- ai_sam_lead_generator - Web scraping and lead generation
-- samai_saas_host_management - Multi-tenant SaaS management
+**Navigation pattern:**
+```
+llms.txt → {module}_META.md → SCHEMA/WOW/FAQ as needed
+```
 
-## For AI Assistants
+---
 
-When helping users with SAM AI:
-1. Check /docs/04_modules/ for module-specific documentation
-2. Check /docs/05_how_sam_works/ for architecture and data flows
-3. Check /docs/08_development/ for coding standards and workflows
+## Core Modules (Start Here)
 
-## Human Documentation
+| Module | META File | Purpose |
+|--------|-----------|---------|
+| ai_sam | [ai_sam_META.md](docs/04_modules/ai_sam/ai_sam_META.md) | Chat UI, frontend layer |
+| ai_sam_base | [ai_sam_base_META.md](docs/04_modules/ai_sam_base/ai_sam_base_META.md) | Backend, models, API, controllers |
+| ai_sam_workflows | [ai_sam_workflows_META.md](docs/04_modules/ai_sam_workflows/ai_sam_workflows_META.md) | N8N-style workflow automation |
+| ai_sam_cache_manager | [ai_sam_cache_manager_META.md](docs/04_modules/ai_sam_cache_manager/ai_sam_cache_manager_META.md) | Caching infrastructure |
 
-For styled, searchable documentation visit: https://sme.ec/documentation
+---
 
-## Repository
+## Architecture (How It Works)
 
-Source: https://github.com/AI-SAM-AI/ai-sam-ai.github.io
+| Topic | Entry Point |
+|-------|-------------|
+| Chat Message Flow | [chat_message_flow_DIAGRAM.md](docs/05_how_sam_works/chat_message_flow/chat_message_flow_DIAGRAM.md) |
+| API Infrastructure | [sam_ai_api_infrastructure/](docs/05_how_sam_works/sam_ai_api_infrastructure/) |
+| Core Architecture | [ARCHITECTURE.md](docs/05_how_sam_works/core/ARCHITECTURE.md) |
+| Database Schema | [SAM_AI_V3_DATABASE_SCHEMA.md](docs/05_how_sam_works/database/SAM_AI_V3_DATABASE_SCHEMA.md) |
+
+---
+
+## All Modules
+
+[docs/04_modules/](docs/04_modules/) - Full index of 18+ modules
+
+Each module folder contains the four-file standard:
+- `{module}_META.md` - Start here
+- `{module}_SCHEMA.md` - Technical details
+- `{module}_WOW.md` - Benefits (non-technical)
+- `{module}_FAQ.md` - Q&A format
+
+---
+
+## Quick Reference
+
+| I need... | Fetch... |
+|-----------|----------|
+| Chat UI structure | [ai_sam_META.md](docs/04_modules/ai_sam/ai_sam_META.md) → SCHEMA |
+| Backend API endpoints | [ai_sam_base_META.md](docs/04_modules/ai_sam_base/ai_sam_base_META.md) → SCHEMA |
+| Workflow automation | [ai_sam_workflows_META.md](docs/04_modules/ai_sam_workflows/ai_sam_workflows_META.md) |
+| How chat messages flow | [chat_message_flow_DIAGRAM.md](docs/05_how_sam_works/chat_message_flow/chat_message_flow_DIAGRAM.md) |
+| Database tables | [SAM_AI_V3_DATABASE_SCHEMA.md](docs/05_how_sam_works/database/SAM_AI_V3_DATABASE_SCHEMA.md) |
+
+---
+
+## Development
+
+| Topic | Entry Point |
+|-------|-------------|
+| Coding Standards | [docs/08_development/](docs/08_development/) |
+| Local Installer | [docs/11_local_installer/](docs/11_local_installer/) |
+| Git Workflows | [docs/08_development/git_workflows/](docs/08_development/git_workflows/) |
+
+---
+
+## For Humans
+
+Styled, searchable documentation: https://sme.ec/documentation
+
+---
+
+## Full Dump (Not Recommended)
+
+[llms-full.txt](llms-full.txt) - 3.7MB complete dump
+
+**Warning:** This file exceeds most AI context windows. Use the META-based navigation above instead.
+
+---
+
+## Source
+
+GitHub: https://github.com/AI-SAM-AI/ai-sam-ai.github.io
