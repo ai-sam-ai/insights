@@ -46,4 +46,4 @@ For styled, searchable documentation visit: https://sme.ec/documentation
 
 ## Repository
 
-Source: https://github.com/AI-SAM-AI/sam-ai-docs
+Source: https://github.com/AI-SAM-AI/ai-sam-ai.github.io
