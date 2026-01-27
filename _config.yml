@@ -22,12 +22,13 @@ kramdown:
   syntax_highlighter: rouge
 
 # Default settings for pages
+# Disable Liquid for all docs to prevent {{ }} syntax conflicts with code examples
 defaults:
   - scope:
       path: "docs"
-      type: "pages"
     values:
       layout: default
+      render_with_liquid: false
 
 # Plugins (GitHub Pages supported)
 plugins:
