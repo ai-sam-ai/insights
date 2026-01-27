@@ -13,6 +13,16 @@ exclude:
   - README.md
   - LICENSE
   - "*.sh"
+  # Exclude files with problematic {{ }} syntax
+  - "docs/05_how_sam_works/n8n_workflows"
+  - "docs/03_prompt_engineering/system_prompts/HIERARCHICAL_KNOWLEDGE_GRAPH_MASTER_PLAN.md"
+  - "docs/04_modules/ai_sam/MODULE_SPLIT_COMPLETE.md"
+  - "docs/00_vision/strategy/SAM_AI_TRANSFORMATION_VISION.md"
+  - "docs/04_modules/crm_lead_firstname"
+  - "docs/05_how_sam_works/canvas"
+  - "docs/01_platform_inspirations/n8n"
+  - "docs/08_development/tooling"
+  - "docs/09_wip"
 
 # Markdown settings
 markdown: kramdown
