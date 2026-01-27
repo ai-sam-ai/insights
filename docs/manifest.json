@@ -1,0 +1,135 @@
+{
+  "name": "SAM AI Insights",
+  "version": "1.0.0",
+  "generated": "2025-01-27T10:00:00Z",
+  "canonical_base": "https://sme.ec/insights",
+  "github_base": "https://github.com/AI-SAM-AI/insights",
+  "pages_base": "https://ai-sam-ai.github.io/insights",
+
+  "structure": {
+    "backbone": [
+      {
+        "path": "",
+        "file": "README.md",
+        "title": "SAM AI Insights",
+        "hash": "initial"
+      }
+    ],
+    "semantic_anchors": [
+      {
+        "path": "modules/ai-sam",
+        "file": "modules/ai-sam.md",
+        "title": "AI SAM Core Module",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "modules/ai-sam-workflows",
+        "file": "modules/ai-sam-workflows.md",
+        "title": "Workflows Module",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "modules/ai-sam-intelligence",
+        "file": "modules/ai-sam-intelligence.md",
+        "title": "Intelligence Module",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "modules/ai-sam-lead-generator",
+        "file": "modules/ai-sam-lead-generator.md",
+        "title": "Lead Generator Module",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "modules/ai-sam-memory",
+        "file": "modules/ai-sam-memory.md",
+        "title": "Memory Module",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "modules/ai-brain",
+        "file": "modules/ai-brain.md",
+        "title": "AI Brain Module",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "agents/sales",
+        "file": "agents/sales.md",
+        "title": "Sales Agent",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "agents/operations",
+        "file": "agents/operations.md",
+        "title": "Operations Agent",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "agents/developer",
+        "file": "agents/developer.md",
+        "title": "Developer Agent",
+        "has_faq": true,
+        "hash": "initial"
+      },
+      {
+        "path": "agents/cto",
+        "file": "agents/cto.md",
+        "title": "CTO Agent",
+        "has_faq": true,
+        "hash": "initial"
+      }
+    ],
+    "drilldown": [
+      {
+        "path": "guides/getting-started",
+        "file": "guides/getting-started.md",
+        "title": "Getting Started",
+        "parent": "",
+        "hash": "initial"
+      },
+      {
+        "path": "guides/architecture",
+        "file": "guides/architecture.md",
+        "title": "SAM AI Architecture",
+        "parent": "modules/ai-sam",
+        "hash": "initial"
+      },
+      {
+        "path": "guides/api-reference",
+        "file": "guides/api-reference.md",
+        "title": "API Reference",
+        "parent": "modules/ai-sam",
+        "hash": "initial"
+      },
+      {
+        "path": "guides/integration",
+        "file": "guides/integration.md",
+        "title": "Integration Guide",
+        "parent": "modules/ai-sam-workflows",
+        "hash": "initial"
+      }
+    ]
+  },
+
+  "special_files": {
+    "llms_txt": "llms.txt",
+    "sitemap": "https://sme.ec/insights/sitemap.xml"
+  },
+
+  "change_log": [
+    {
+      "date": "2025-01-27",
+      "path": "",
+      "type": "created",
+      "description": "Initial repository structure"
+    }
+  ]
+}

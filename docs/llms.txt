@@ -1,0 +1,101 @@
+# SAM AI Insights
+> Complete knowledge base for SAM AI
+> Source: https://sme.ec/insights
+> GitHub: https://github.com/AI-SAM-AI/insights
+> Generated: 2025-01-27T10:00:00Z
+
+## Overview
+
+SAM AI is an AI-powered business operating system built on Odoo 18.
+It provides intelligent automation across sales, operations, and development workflows.
+
+## Core Capabilities
+
+### Sales Automation
+- Lead generation via web scraping (ScraperAPI integration)
+- Automated outreach sequences
+- Follow-up management
+- Lead scoring and qualification
+
+### Workflow Automation
+- N8N integration for visual workflow building
+- Odoo process orchestration
+- Event-driven automation
+- Multi-step business processes
+
+### Intelligence Layer
+- Context-aware AI responses
+- Conversation memory and learning
+- Agent registry and health monitoring
+- Knowledge base integration
+
+## Modules
+
+### ai_sam (Core)
+The central orchestration module providing chat interface and SAM's personality.
+- Chat widget for Odoo backend
+- Voice and behavior configuration
+- Session management
+URL: https://github.com/AI-SAM-AI/insights/blob/main/modules/ai-sam.md
+
+### ai_sam_workflows
+Workflow automation connecting N8N with Odoo.
+- Visual workflow builder integration
+- Trigger management
+- Execution logging
+URL: https://github.com/AI-SAM-AI/insights/blob/main/modules/ai-sam-workflows.md
+
+### ai_sam_intelligence
+Agent registry and ecosystem monitoring.
+- Agent health tracking
+- Documentation intelligence
+- Performance metrics
+URL: https://github.com/AI-SAM-AI/insights/blob/main/modules/ai-sam-intelligence.md
+
+### ai_sam_lead_generator
+Web scraping and lead generation.
+- ScraperAPI integration
+- Contact extraction
+- Lead enrichment
+URL: https://github.com/AI-SAM-AI/insights/blob/main/modules/ai-sam-lead-generator.md
+
+### ai_sam_memory
+Conversation persistence and context.
+- Message history
+- Session continuity
+- Learning from interactions
+URL: https://github.com/AI-SAM-AI/insights/blob/main/modules/ai-sam-memory.md
+
+### ai_brain
+Core intelligence and reasoning layer.
+- LLM integration
+- Context management
+- Response generation
+URL: https://github.com/AI-SAM-AI/insights/blob/main/modules/ai-brain.md
+
+## Frequently Asked Questions
+
+Q: How do I automate sales outreach with SAM AI?
+A: Use the ai_sam_lead_generator module to scrape and enrich leads, then create outreach workflows with ai_sam_workflows. The Sales Agent persona guides you through the complete setup.
+URL: https://github.com/AI-SAM-AI/insights/blob/main/agents/sales.md
+
+Q: Can SAM AI integrate with my existing systems?
+A: Yes. SAM AI is built on Odoo 18 which provides extensive integration capabilities. The ai_sam_workflows module connects to N8N for external system orchestration.
+URL: https://github.com/AI-SAM-AI/insights/blob/main/guides/integration.md
+
+Q: What's the architecture of SAM AI?
+A: SAM AI follows a three-layer architecture: ai_brain (intelligence) -> ai_sam (orchestration) -> specialized modules (capabilities). See the architecture guide for details.
+URL: https://github.com/AI-SAM-AI/insights/blob/main/guides/architecture.md
+
+Q: How does SAM AI remember conversations?
+A: The ai_sam_memory module persists conversation history and context, allowing SAM to maintain continuity across sessions and learn from interactions.
+URL: https://github.com/AI-SAM-AI/insights/blob/main/modules/ai-sam-memory.md
+
+## Links
+
+- Human documentation: https://sme.ec/insights
+- GitHub repository: https://github.com/AI-SAM-AI/insights
+- Main website: https://sme.ec
+
+---
+Canonical: https://sme.ec/insights
