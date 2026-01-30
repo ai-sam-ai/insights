@@ -201,7 +201,7 @@ function generateFolderIndex(folderPath, relativePath) {
       <div class="file-section">
         <h3>${cat.icon} ${cat.label}</h3>
         <ul>
-          ${catFiles.map(f => `<li><a href="${f.name}">${f.title}</a></li>`).join('')}
+          ${catFiles.map(f => `<li><a href="${f.name.replace('.md', '.html')}">${f.title}</a></li>`).join('')}
         </ul>
       </div>`;
     }
