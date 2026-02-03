@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAM AI Documentation</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 900px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
-        h1 { color: #1a1a2e; }
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 0 auto; padding: 2rem; line-height: 1.6; color: #333; background: #fafafa; }
+        h1 { color: #1a1a2e; border-bottom: 3px solid #667eea; padding-bottom: 0.5rem; }
+        h2 { color: #444; margin-top: 1.5rem; }
         a { color: #0066cc; }
-        .section { margin: 2rem 0; padding: 1rem; background: #f5f5f5; border-radius: 8px; }
-        .section h2 { margin-top: 0; color: #333; }
+        .section { margin: 1.5rem 0; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .section h2 { margin-top: 0; }
         ul { padding-left: 1.5rem; }
-        li { margin: 0.5rem 0; }
-        .highlight { background: #fff3cd; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+        li { margin: 0.75rem 0; }
+        .highlight { background: #e3f2fd; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+        .auto-gen { background: #f0f4f8; padding: 0.75rem 1rem; border-radius: 4px; font-size: 0.85rem; margin: 1.5rem 0; }
+        footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; color: #666; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -20,41 +23,127 @@
     <p>AI-powered business automation platform built on Odoo 18.</p>
 
     <div class="highlight">
-        <strong>For AI Assistants:</strong> See <a href="llms.txt">llms.txt</a> for structured documentation overview.
+        <strong>For AI Assistants:</strong> See <a href="llms.txt">llms.txt</a> for structured navigation, or <a href="llms-full.txt">llms-full.txt</a> for complete content.
+    </div>
+
+    <div class="auto-gen">
+        🤖 <strong>Auto-generated</strong> - This page updates automatically when documentation changes.
+        Last generated: 2026-02-03
     </div>
 
     <div class="section">
         <h2>Documentation Sections</h2>
         <ul>
-            <li><a href="docs/00_vision/_README.html">Vision & Strategy</a></li>
-            <li><a href="docs/00_saas/The%20Onboarding%20Experience.html">SaaS Deployment</a></li>
-            <li><a href="docs/04_modules/_README.html">Module Documentation</a> (18+ modules)</li>
-            <li><a href="docs/05_how_sam_works/_README.html">How SAM Works</a> - Architecture & Data Flows</li>
-            <li><a href="docs/08_development/_README.html">Development Guides</a></li>
-            <li><a href="docs/11_local_installer/_README.html">Local Installer</a></li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Key Modules</h2>
-        <ul>
-            <li><a href="docs/04_modules/ai_sam/_README.html">ai_sam</a> - Core SAM AI (chat, orchestration)</li>
-            <li><a href="docs/04_modules/ai_sam_workflows/_README.html">ai_sam_workflows</a> - Workflow automation</li>
-            <li><a href="docs/04_modules/ai_sam_base/_README.html">ai_sam_base</a> - Base infrastructure</li>
+            <li>
+              <a href="docs/00_saas/">Saas</a>
+              
+              <small style="color:#999; margin-left:0.5rem">(2 docs)</small>
+            </li>
+            <li>
+              <a href="docs/00_vision/">Vision</a>
+              <br><small style="color:#666">Vision</small>
+              <small style="color:#999; margin-left:0.5rem">(8 docs)</small>
+            </li>
+            <li>
+              <a href="docs/01_platform_inspirations/">Platform Inspirations</a>
+              <br><small style="color:#666">Platform Inspirations</small>
+              <small style="color:#999; margin-left:0.5rem">(12 docs)</small>
+            </li>
+            <li>
+              <a href="docs/02_sam_skills/">Sam Skills</a>
+              <br><small style="color:#666">SAM Skills</small>
+              <small style="color:#999; margin-left:0.5rem">(8 docs)</small>
+            </li>
+            <li>
+              <a href="docs/03_prompt_engineering/">Prompt Engineering</a>
+              <br><small style="color:#666">Prompt Engineering</small>
+              <small style="color:#999; margin-left:0.5rem">(27 docs)</small>
+            </li>
+            <li>
+              <a href="docs/04_modules/">Modules</a>
+              <br><small style="color:#666">Modules</small>
+              <small style="color:#999; margin-left:0.5rem">(227 docs)</small>
+            </li>
+            <li>
+              <a href="docs/05_how_sam_works/">How Sam Works</a>
+              <br><small style="color:#666">How SAM Works</small>
+              <small style="color:#999; margin-left:0.5rem">(72 docs)</small>
+            </li>
+            <li>
+              <a href="docs/07_platform_skins/">Platform Skins</a>
+              <br><small style="color:#666">Platform Skins</small>
+              <small style="color:#999; margin-left:0.5rem">(1 docs)</small>
+            </li>
+            <li>
+              <a href="docs/08_development/">Development</a>
+              <br><small style="color:#666">Development</small>
+              <small style="color:#999; margin-left:0.5rem">(19 docs)</small>
+            </li>
+            <li>
+              <a href="docs/09_wip/">Wip</a>
+              <br><small style="color:#666">Work In Progress</small>
+              <small style="color:#999; margin-left:0.5rem">(9 docs)</small>
+            </li>
+            <li>
+              <a href="docs/10_sales_marketing/">Sales Marketing</a>
+              <br><small style="color:#666">Sales & Marketing</small>
+              <small style="color:#999; margin-left:0.5rem">(13 docs)</small>
+            </li>
+            <li>
+              <a href="docs/11_local_installer/">Local Installer</a>
+              <br><small style="color:#666">Local Installer</small>
+              <small style="color:#999; margin-left:0.5rem">(41 docs)</small>
+            </li>
+            <li>
+              <a href="docs/12_funnels/">Funnels</a>
+              <br><small style="color:#666">SAM AI Funnels</small>
+              <small style="color:#999; margin-left:0.5rem">(10 docs)</small>
+            </li>
+            <li>
+              <a href="docs/13_sam_ai_social_star/">Sam Ai Social Star</a>
+              
+              <small style="color:#999; margin-left:0.5rem">(3 docs)</small>
+            </li>
+            <li>
+              <a href="docs/agents/">Agents</a>
+              
+              <small style="color:#999; margin-left:0.5rem">(5 docs)</small>
+            </li>
+            <li>
+              <a href="docs/FINAL_DOCS_REVIEW/">FINAL DOCS REVIEW</a>
+              <br><small style="color:#666">FINAL DOCS REVIEW</small>
+              <small style="color:#999; margin-left:0.5rem">(1 docs)</small>
+            </li>
+            <li>
+              <a href="docs/guides/">Guides</a>
+              
+              <small style="color:#999; margin-left:0.5rem">(4 docs)</small>
+            </li>
+            <li>
+              <a href="docs/modules/">Modules</a>
+              
+              <small style="color:#999; margin-left:0.5rem">(7 docs)</small>
+            </li>
+            <li>
+              <a href="docs/sales_agent_knowledge/">Sales Agent Knowledge</a>
+              <br><small style="color:#666">Sales Agent Knowledge Bank</small>
+              <small style="color:#999; margin-left:0.5rem">(8 docs)</small>
+            </li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Quick Links</h2>
         <ul>
-            <li><a href="https://sme.ec/documentation">Human-Friendly Docs</a> (styled, searchable)</li>
-            <li><a href="https://github.com/AI-SAM-AI/sam-ai-docs">GitHub Repository</a></li>
-            <li><a href="llms.txt">llms.txt</a> (AI assistant guide)</li>
+            <li><a href="https://sme.ec/insights">Human-Friendly Docs</a> (styled, searchable)</li>
+            <li><a href="https://github.com/ai-sam-ai/insights">GitHub Repository</a></li>
+            <li><a href="llms.txt">llms.txt</a> (AI quick reference)</li>
+            <li><a href="llms-full.txt">llms-full.txt</a> (AI complete content)</li>
         </ul>
     </div>
 
-    <footer style="margin-top: 3rem; color: #666; font-size: 0.9rem;">
-        <p>Built with care by the SAM AI team</p>
+    <footer>
+        <p>Built with care by the SAM AI team | <a href="https://ai-sam-ai.github.io/">ai-sam-ai.github.io</a></p>
     </footer>
 </body>
 </html>

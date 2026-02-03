@@ -376,6 +376,121 @@ function processFolder(folderPath, relativePath = '') {
   }
 }
 
+/**
+ * Generate root index.html from docs structure
+ */
+function generateRootIndex() {
+  const ROOT_PATH = path.resolve(__dirname, '..');
+  const sections = [];
+
+  // Read all top-level folders in docs
+  const items = fs.readdirSync(DOCS_ROOT);
+  for (const item of items) {
+    if (item.startsWith('.') || item.startsWith('_') || IGNORED.includes(item)) continue;
+
+    const fullPath = path.join(DOCS_ROOT, item);
+    if (fs.statSync(fullPath).isDirectory()) {
+      const description = getFolderDescription(fullPath);
+      const fileCount = countMarkdownFiles(fullPath);
+      sections.push({
+        name: item,
+        displayName: toDisplayName(item),
+        description: description,
+        fileCount: fileCount
+      });
+    }
+  }
+
+  // Sort by name (keeps numeric prefix order)
+  sections.sort((a, b) => a.name.localeCompare(b.name));
+
+  // Generate sections HTML
+  const sectionsHtml = sections.map(s => `
+            <li>
+              <a href="docs/${s.name}/">${s.displayName}</a>
+              ${s.description ? `<br><small style="color:#666">${s.description.substring(0, 80)}${s.description.length > 80 ? '...' : ''}</small>` : ''}
+              <small style="color:#999; margin-left:0.5rem">(${s.fileCount} docs)</small>
+            </li>`).join('');
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM AI Documentation</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 0 auto; padding: 2rem; line-height: 1.6; color: #333; background: #fafafa; }
+        h1 { color: #1a1a2e; border-bottom: 3px solid #667eea; padding-bottom: 0.5rem; }
+        h2 { color: #444; margin-top: 1.5rem; }
+        a { color: #0066cc; }
+        .section { margin: 1.5rem 0; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .section h2 { margin-top: 0; }
+        ul { padding-left: 1.5rem; }
+        li { margin: 0.75rem 0; }
+        .highlight { background: #e3f2fd; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+        .auto-gen { background: #f0f4f8; padding: 0.75rem 1rem; border-radius: 4px; font-size: 0.85rem; margin: 1.5rem 0; }
+        footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; color: #666; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <h1>SAM AI Documentation</h1>
+    <p>AI-powered business automation platform built on Odoo 18.</p>
+
+    <div class="highlight">
+        <strong>For AI Assistants:</strong> See <a href="llms.txt">llms.txt</a> for structured navigation, or <a href="llms-full.txt">llms-full.txt</a> for complete content.
+    </div>
+
+    <div class="auto-gen">
+        🤖 <strong>Auto-generated</strong> - This page updates automatically when documentation changes.
+        Last generated: ${new Date().toISOString().split('T')[0]}
+    </div>
+
+    <div class="section">
+        <h2>Documentation Sections</h2>
+        <ul>${sectionsHtml}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="https://sme.ec/insights">Human-Friendly Docs</a> (styled, searchable)</li>
+            <li><a href="https://github.com/ai-sam-ai/insights">GitHub Repository</a></li>
+            <li><a href="llms.txt">llms.txt</a> (AI quick reference)</li>
+            <li><a href="llms-full.txt">llms-full.txt</a> (AI complete content)</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Built with care by the SAM AI team | <a href="https://ai-sam-ai.github.io/">ai-sam-ai.github.io</a></p>
+    </footer>
+</body>
+</html>`;
+
+  const rootIndexPath = path.join(ROOT_PATH, 'index.html');
+  fs.writeFileSync(rootIndexPath, html);
+  console.log('📍 Generated root index.html');
+}
+
+/**
+ * Count markdown files recursively in a folder
+ */
+function countMarkdownFiles(folderPath) {
+  let count = 0;
+  const items = fs.readdirSync(folderPath);
+  for (const item of items) {
+    if (item.startsWith('.') || IGNORED.includes(item)) continue;
+    const fullPath = path.join(folderPath, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      count += countMarkdownFiles(fullPath);
+    } else if (item.endsWith('.md')) {
+      count++;
+    }
+  }
+  return count;
+}
+
 // Main execution
 console.log('🤖 SAM AI Documentation Index Generator\n');
 console.log(`Scanning: ${DOCS_ROOT}\n`);
@@ -385,7 +500,11 @@ if (!fs.existsSync(DOCS_ROOT)) {
   process.exit(1);
 }
 
+// Generate subfolder indexes
 processFolder(DOCS_ROOT);
 
-console.log(`\n✅ Generated ${stats.folders} index.html files`);
+// Generate root index
+generateRootIndex();
+
+console.log(`\n✅ Generated ${stats.folders} folder index.html files`);
 console.log(`📄 Indexed ${stats.files} markdown documents`);
