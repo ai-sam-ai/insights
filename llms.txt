@@ -10,17 +10,19 @@ Base URL: https://ai-sam-ai.github.io
 
 SAM AI uses a **four-file documentation standard** per module:
 
-| File | Purpose | When to Fetch |
-|------|---------|---------------|
-| `_META.md` | Agent routing, context, cross-references | **First** - start here |
-| `_SCHEMA.md` | Technical specs, models, API endpoints | Need code details |
-| `_WOW.md` | Benefits, use cases (non-technical) | Need sales/marketing context |
-| `_FAQ.md` | Q&A format, troubleshooting | Specific questions |
+| File Pattern | Purpose | When to Fetch |
+|--------------|---------|---------------|
+| `{module}_META.html` | Agent routing, context, cross-references | **First** - start here |
+| `{module}_SCHEMA.html` | Technical specs, models, API endpoints | Need code details |
+| `{module}_WOW.html` | Benefits, use cases (non-technical) | Need sales/marketing context |
+| `{module}_FAQ.html` | Q&A format, troubleshooting | Specific questions |
 
 **Navigation pattern:**
 ```
-llms.txt → {module}_META.md → SCHEMA/WOW/FAQ as needed
+llms.txt → {module}_META.html → SCHEMA/WOW/FAQ as needed
 ```
+
+> **Note:** Source files are `.md` but Jekyll converts them to `.html`. Always use `.html` extension when fetching.
 
 ---
 
@@ -28,10 +30,10 @@ llms.txt → {module}_META.md → SCHEMA/WOW/FAQ as needed
 
 | Module | META File | Purpose |
 |--------|-----------|---------|
-| ai_sam | [ai_sam_META.md](docs/04_modules/ai_sam/ai_sam_META.md) | Chat UI, frontend layer |
-| ai_sam_base | [ai_sam_base_META.md](docs/04_modules/ai_sam_base/ai_sam_base_META.md) | Backend, models, API, controllers |
-| ai_sam_workflows | [ai_sam_workflows_META.md](docs/04_modules/ai_sam_workflows/ai_sam_workflows_META.md) | N8N-style workflow automation |
-| ai_sam_cache_manager | [ai_sam_cache_manager_META.md](docs/04_modules/ai_sam_cache_manager/ai_sam_cache_manager_META.md) | Caching infrastructure |
+| ai_sam | [ai_sam_META](docs/04_modules/ai_sam/ai_sam_META.html) | Chat UI, frontend layer |
+| ai_sam_base | [ai_sam_base_META](docs/04_modules/ai_sam_base/ai_sam_base_META.html) | Backend, models, API, controllers |
+| ai_sam_workflows | [ai_sam_workflows_META](docs/04_modules/ai_sam_workflows/ai_sam_workflows_META.html) | N8N-style workflow automation |
+| ai_sam_cache_manager | [ai_sam_cache_manager_META](docs/04_modules/ai_sam_cache_manager/ai_sam_cache_manager_META.html) | Caching infrastructure |
 
 ---
 
@@ -39,22 +41,22 @@ llms.txt → {module}_META.md → SCHEMA/WOW/FAQ as needed
 
 | Topic | Entry Point |
 |-------|-------------|
-| Chat Message Flow | [chat_message_flow_DIAGRAM.md](docs/05_how_sam_works/chat_message_flow/chat_message_flow_DIAGRAM.md) |
+| Chat Message Flow | [chat_message_flow_DIAGRAM](docs/05_how_sam_works/chat_message_flow/chat_message_flow_DIAGRAM.html) |
 | API Infrastructure | [sam_ai_api_infrastructure/](docs/05_how_sam_works/sam_ai_api_infrastructure/) |
-| Core Architecture | [ARCHITECTURE.md](docs/05_how_sam_works/core/ARCHITECTURE.md) |
-| Database Schema | [SAM_AI_V3_DATABASE_SCHEMA.md](docs/05_how_sam_works/database/SAM_AI_V3_DATABASE_SCHEMA.md) |
+| Core Architecture | [ARCHITECTURE](docs/05_how_sam_works/core/ARCHITECTURE.html) |
+| Database Schema | [SAM_AI_V3_DATABASE_SCHEMA](docs/05_how_sam_works/database/SAM_AI_V3_DATABASE_SCHEMA.html) |
 
 ---
 
 ## All Modules
 
-[docs/04_modules/](docs/04_modules/) - Full index of 18+ modules
+[docs/04_modules/](docs/04_modules/) - Full index of 49+ modules
 
-Each module folder contains the four-file standard:
-- `{module}_META.md` - Start here
-- `{module}_SCHEMA.md` - Technical details
-- `{module}_WOW.md` - Benefits (non-technical)
-- `{module}_FAQ.md` - Q&A format
+Each module folder contains the four-file standard (use `.html` extension when fetching):
+- `{module}_META.html` - Start here
+- `{module}_SCHEMA.html` - Technical details
+- `{module}_WOW.html` - Benefits (non-technical)
+- `{module}_FAQ.html` - Q&A format
 
 ---
 
@@ -62,11 +64,11 @@ Each module folder contains the four-file standard:
 
 | I need... | Fetch... |
 |-----------|----------|
-| Chat UI structure | [ai_sam_META.md](docs/04_modules/ai_sam/ai_sam_META.md) → SCHEMA |
-| Backend API endpoints | [ai_sam_base_META.md](docs/04_modules/ai_sam_base/ai_sam_base_META.md) → SCHEMA |
-| Workflow automation | [ai_sam_workflows_META.md](docs/04_modules/ai_sam_workflows/ai_sam_workflows_META.md) |
-| How chat messages flow | [chat_message_flow_DIAGRAM.md](docs/05_how_sam_works/chat_message_flow/chat_message_flow_DIAGRAM.md) |
-| Database tables | [SAM_AI_V3_DATABASE_SCHEMA.md](docs/05_how_sam_works/database/SAM_AI_V3_DATABASE_SCHEMA.md) |
+| Chat UI structure | [ai_sam_META](docs/04_modules/ai_sam/ai_sam_META.html) → SCHEMA |
+| Backend API endpoints | [ai_sam_base_META](docs/04_modules/ai_sam_base/ai_sam_base_META.html) → SCHEMA |
+| Workflow automation | [ai_sam_workflows_META](docs/04_modules/ai_sam_workflows/ai_sam_workflows_META.html) |
+| How chat messages flow | [chat_message_flow_DIAGRAM](docs/05_how_sam_works/chat_message_flow/chat_message_flow_DIAGRAM.html) |
+| Database tables | [SAM_AI_V3_DATABASE_SCHEMA](docs/05_how_sam_works/database/SAM_AI_V3_DATABASE_SCHEMA.html) |
 
 ---
 
