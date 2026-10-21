@@ -8,7 +8,7 @@
 
 ### What is ai_sam_base?
 
-ai_sam_base is the foundational module for SAM AI (Strategic Automation Manager) built for Odoo 18. It provides the core data layer including AI conversation storage, multi-provider API orchestration, token tracking, cost optimization, and user personalization. It is part of the SAM AI ecosystem developed by SME.ec.
+ai_sam_base is the foundational module for SAM AI (Simplify, Automate, Manage) built for Odoo 18. It provides the core data layer including AI conversation storage, multi-provider API orchestration, token tracking, cost optimization, and user personalization. It is part of the SAM AI ecosystem developed by SME.ec.
 
 **Key facts:**
 - Technical name: `ai_sam_base`

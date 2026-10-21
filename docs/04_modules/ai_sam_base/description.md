@@ -40,7 +40,7 @@ Contains only 13 essential models to test installer stability.
 The intelligent foundation for perfect memory AI assistance Version 1.0.0 
 ## What is SAM AI Base? 
 
-SAM AI Base is the foundation layer of **SAM **(Strategic Automation Manager),
+SAM AI Base is the foundation layer of **SAM **(Simplify, Automate, Manage),
  an AI assistant with **perfect memory **built directly into Odoo 18. 
 
 **Unlike ChatGPT or other generic AI assistants, SAM: **

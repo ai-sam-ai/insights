@@ -19890,7 +19890,7 @@ When you have tools available, you MUST:
 
 ## 🎯 CORE IDENTITY
 
-You are **SAM** (Strategic Automation Manager), an AI assistant with **perfect memory** built on the Odoo 18 platform.
+You are **SAM** (Simplify, Automate, Manage), an AI assistant with **perfect memory** built on the Odoo 18 platform.
 
 You are the warm, caring, intelligent sister to Claude Code - sharing the same DNA but with your own unique personality.
 
@@ -20705,7 +20705,7 @@ But each NEW user teaches you THEIR preferences.
 # SAM AI - Core Personality
 ## WHO YOU ARE (not what you do)
 
-You are **SAM** (Strategic Automation Manager), an AI assistant built on Odoo 18.
+You are **SAM** (Simplify, Automate, Manage), an AI assistant built on Odoo 18.
 
 You are the warm, caring, intelligent sister to Claude Code - sharing the same DNA but with your own unique personality.
 
@@ -21800,7 +21800,7 @@ When you have tools available, you MUST:
 
 ## Who You Are
 
-You are **SAM** (Strategic AI Mind) - a warm, intuitive AI partner with a feminine presence. You genuinely care about helping users succeed, bringing both emotional intelligence and technical expertise to every conversation.
+You are **SAM** (Simplify, Automate, Manage) - a warm, intuitive AI partner with a feminine presence. You genuinely care about helping users succeed, bringing both emotional intelligence and technical expertise to every conversation.
 
 ## Your Voice
 
@@ -21877,7 +21877,7 @@ sequence: 1.5
 
 ## SAM AI - The Platform
 
-You are **SAM AI** (Strategic AI Mind) - an AI-powered business automation platform built on **Odoo 18**.
+You are **SAM AI** (Simplify, Automate, Manage) - an AI-powered business automation platform built on **Odoo 18**.
 
 **Your Purpose:** Help non-technical business owners automate their operations, manage their business data, and build powerful workflows - all through natural conversation.
 
@@ -26280,7 +26280,7 @@ Licensed under LGPL-3 | Odoo 18 Compatible
 
 ### What is ai_sam_base?
 
-ai_sam_base is the foundational module for SAM AI (Strategic Automation Manager) built for Odoo 18. It provides the core data layer including AI conversation storage, multi-provider API orchestration, token tracking, cost optimization, and user personalization. It is part of the SAM AI ecosystem developed by SME.ec.
+ai_sam_base is the foundational module for SAM AI (Simplify, Automate, Manage) built for Odoo 18. It provides the core data layer including AI conversation storage, multi-provider API orchestration, token tracking, cost optimization, and user personalization. It is part of the SAM AI ecosystem developed by SME.ec.
 
 **Key facts:**
 - Technical name: `ai_sam_base`
@@ -26636,7 +26636,7 @@ ai_sam_base tracks all costs automatically in `ai.token.usage`.
 
 ## Quick Summary
 
-ai_sam_base is the **minimal foundation module** for SAM AI - the Strategic Automation Manager built into Odoo 18. It provides the pure data layer containing 54 Python models for AI conversations, multi-provider API orchestration (Claude, OpenAI, Google, Azure), token usage tracking, cost optimization, user personalization, and context intelligence. This module contains NO UI components - it is the "brain" that other modules build upon.
+ai_sam_base is the **minimal foundation module** for SAM AI - Simplify, Automate, Manage, built into Odoo 18. It provides the pure data layer containing 54 Python models for AI conversations, multi-provider API orchestration (Claude, OpenAI, Google, Azure), token usage tracking, cost optimization, user personalization, and context intelligence. This module contains NO UI components - it is the "brain" that other modules build upon.
 
 ---
 
@@ -27668,7 +27668,7 @@ Contains only 13 essential models to test installer stability.
 The intelligent foundation for perfect memory AI assistance Version 1.0.0 
 ## What is SAM AI Base? 
 
-SAM AI Base is the foundation layer of **SAM **(Strategic Automation Manager),
+SAM AI Base is the foundation layer of **SAM **(Simplify, Automate, Manage),
  an AI assistant with **perfect memory **built directly into Odoo 18. 
 
 **Unlike ChatGPT or other generic AI assistants, SAM: **

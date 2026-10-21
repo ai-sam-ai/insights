@@ -21,7 +21,7 @@
 
 ## Quick Summary
 
-ai_sam_base is the **minimal foundation module** for SAM AI - the Strategic Automation Manager built into Odoo 18. It provides the pure data layer containing 54 Python models for AI conversations, multi-provider API orchestration (Claude, OpenAI, Google, Azure), token usage tracking, cost optimization, user personalization, and context intelligence. This module contains NO UI components - it is the "brain" that other modules build upon.
+ai_sam_base is the **minimal foundation module** for SAM AI - Simplify, Automate, Manage, built into Odoo 18. It provides the pure data layer containing 54 Python models for AI conversations, multi-provider API orchestration (Claude, OpenAI, Google, Azure), token usage tracking, cost optimization, user personalization, and context intelligence. This module contains NO UI components - it is the "brain" that other modules build upon.
 
 ---
 
